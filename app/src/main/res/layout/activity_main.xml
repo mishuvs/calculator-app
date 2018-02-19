@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.it34.student.hyit34.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/display_secondary"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/display_height"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:maxLines="1"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:id="@+id/operation_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/display_primary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/display_height"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/clear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="clear"
+                        android:text="C" />
+
+                    <Button
+                        android:id="@+id/back"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="back"
+                        android:text="&lt;-" />
+                </LinearLayout>
+
+                <GridView
+                    android:id="@+id/number_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="3" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/operations"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
